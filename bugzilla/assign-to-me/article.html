@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+---
+title: "Bugzilla: \"Assign to me\" button"
+jetpack: assign-to-me.js
+---
+
+{% block article -%}
+  <p>
+    Adds an "assign to me" button next to the assignee field, unless
+    you already are the assignee.
+  </p>
+  <p>
+    This jetpack is based on <a href="http://blog.mozilla.com/oremj/2009/11/23/assigntome-bookmarklet/">oremj's bookmarklet</a>.
+  </p>
+{%- endblock %}
