@@ -1,4 +1,4 @@
-# Not an executable so it keeps the same python environment.
+#!/bin/sh
 
 ROOT="gh-pages"
 
