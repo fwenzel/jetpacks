@@ -37,6 +37,7 @@ def main():
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))
     articles = map(lambda s: path(s.lstrip('./')),
                    path('.').walkfiles('article.html'))
+    articles = filter(lambda a: not a.startswith('gh-pages'), articles)
     titles = []
 
     for article in articles:
