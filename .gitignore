@@ -1,3 +1,4 @@
+gh-pages
 *.html
 !index.html
 *.py
