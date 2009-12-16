@@ -10,6 +10,9 @@ jetpack.pageMods.add(function(doc){
     // already the assignee?
     if (assigned_to.val() == user_name) return;
 
+    // does button already exist? Mozilla bug 535001
+    if ($doc.find('#bz_assignee_edit_container button').size()) return;
+
     // otherwise, make an assignee button
     var button = $('<button>Assign to me</button>', doc);
     button.click(function() {
@@ -19,3 +22,4 @@ jetpack.pageMods.add(function(doc){
     $doc.find('#bz_assignee_edit_container').append(button);
 },
 ['https://bugzilla.mozilla.org/show_bug.cgi*']);
+
